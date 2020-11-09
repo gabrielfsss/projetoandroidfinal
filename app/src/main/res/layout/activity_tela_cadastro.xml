@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#363636">
+    android:background="#363636"
+    tools:context=".telaCadastro">
+
 
     <EditText
         android:id="@+id/txtEmail"
@@ -15,14 +16,33 @@
 
         android:layout_centerHorizontal="true"
         android:layout_marginTop="260dp"
-
         android:drawableLeft="@drawable/ic_user"
         android:ems="10"
-        android:hint="Email"
+        android:hint="Nome"
 
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
 
+        android:textColorHint="#73F5F5F5"
+        android:textSize="20sp"
+        android:textColor="#D3D3D3"/>
+
+    <EditText
+        android:id="@+id/txtNome"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/txtEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:drawableLeft="@drawable/ic_senha"
+        android:ems="10"
+
+        android:hint="Email"
+        android:inputType="textPersonName"
+
+        android:paddingLeft="10dp"
         android:textColorHint="#73F5F5F5"
         android:textSize="20sp"
         android:textColor="#D3D3D3"/>
@@ -33,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_below="@+id/txtEmail"
+        android:layout_below="@+id/txtNome"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:drawableLeft="@drawable/ic_senha"
@@ -59,34 +79,15 @@
         android:layout_marginBottom="150dp"
         android:background="@drawable/buttonshape"
 
-        android:onClick="Entrar"
+        android:onClick="cadastrarUsuario"
 
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="25"
 
-        android:text="Entrar"
+        android:text="Cadastrar"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/btncadastro"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="90dp"
-        android:autoText="false"
-
-        android:onClick="cadastrar"
-
-        android:background="@drawable/buttoncadastroshape"
-        android:text="Ainda não tem um conta? Se cadastre aqui"
-        android:textAllCaps="false"
-        android:textColor="#E91E63"
-        android:textSize="12sp" />
 </RelativeLayout>

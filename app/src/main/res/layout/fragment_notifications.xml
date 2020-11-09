@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment"
+    android:background="#363636">
+
+    <EditText
+        android:id="@+id/editTextTexto"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:inputType="text"
+        android:paddingStart="50dp"
+        android:paddingLeft="50dp"
+
+        android:hint="Digite algo!"
+        android:textColorHint="#808080"
+        android:textSize="16sp"
+
+        android:layout_alignParentBottom="true"
+
+        android:background="#1C1C1C"
+        android:textColor="#DCDCDC"
+
+        android:drawablePadding="40dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+
+        android:background="#1C1C1C">
+
+
+        <ImageView
+            android:id="@+id/imageView9"
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+
+            app:srcCompat="@drawable/ic_alert"
+            tools:ignore="VectorDrawableCompat"
+
+            android:layout_centerInParent="true"
+
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="690dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="650dp"
+
+                android:layout_marginTop="40dp">
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
