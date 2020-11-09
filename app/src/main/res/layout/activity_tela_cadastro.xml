@@ -16,9 +16,9 @@
 
         android:layout_centerHorizontal="true"
         android:layout_marginTop="260dp"
-        android:drawableLeft="@drawable/ic_user"
+        android:drawableLeft="@drawable/ic_email"
         android:ems="10"
-        android:hint="Nome"
+        android:hint="Email"
 
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
@@ -36,10 +36,10 @@
         android:layout_below="@+id/txtEmail"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:drawableLeft="@drawable/ic_senha"
+        android:drawableLeft="@drawable/ic_user"
         android:ems="10"
 
-        android:hint="Email"
+        android:hint="Nome"
         android:inputType="textPersonName"
 
         android:paddingLeft="10dp"
