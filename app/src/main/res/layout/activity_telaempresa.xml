@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".telaempresa"
+    android:background="#363636">
+
+    <TextView
+        android:id="@+id/textEmpresaQuemE"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+
+        android:text="Quem somos nós?"
+        android:textColor="#FFFF"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/textEmpresaQuemE2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textEmpresaQuemE"
+        android:layout_marginTop="50dp"
+
+        android:text="A LATAM é uma empresa:"
+        android:textColor="#DCDCDC"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/textEmpresaOp1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/textEmpresaQuemE2"
+        android:layout_marginTop="50dp"
+
+        android:text="Confortavel"
+        android:textColor="#DCDCDC"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/textEmpresaOp2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/textEmpresaOp1"
+        android:layout_marginTop="50dp"
+
+        android:text="Eficiente"
+        android:textColor="#DCDCDC"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/textEmpresaOp3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/textEmpresaOp2"
+        android:layout_marginTop="50dp"
+
+        android:text="Rápida"
+        android:textColor="#DCDCDC"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/textAviaoFinal"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+
+        android:text="Estamos sempre do lado do cliente!"
+        android:textColor="#FFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/imageConfort"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_toRightOf="@+id/textEmpresaOp1"
+        android:layout_below="@+id/textEmpresaQuemE2"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="60dp"
+
+        app:srcCompat="@drawable/ic_confortavel"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/imageEfic"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_toRightOf="@+id/textEmpresaOp2"
+        android:layout_below="@+id/imageConfort"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="85dp"
+
+        app:srcCompat="@drawable/ic_eficientee"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/imageRapida"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_toRightOf="@+id/textEmpresaOp2"
+        android:layout_below="@+id/imageEfic"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="85dp"
+
+        app:srcCompat="@drawable/ic_rapida"
+        tools:ignore="VectorDrawableCompat" />
+</RelativeLayout>

@@ -20,6 +20,7 @@ import com.gabriel.projetofinalandroid.MainActivity;
 import com.gabriel.projetofinalandroid.R;
 import com.gabriel.projetofinalandroid.telaCadastro;
 import com.gabriel.projetofinalandroid.telaaviao;
+import com.gabriel.projetofinalandroid.telaempresa;
 import com.gabriel.projetofinalandroid.telafilmes;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -59,6 +60,11 @@ public class DashboardFragment extends Fragment {
 
     public void filmes(View view){
         Intent i = new Intent(getActivity(), telafilmes.class);
+        startActivity(i);
+    }
+
+    public void empresa(View view){
+        Intent i = new Intent(getActivity(), telaempresa.class);
         startActivity(i);
     }
 }

@@ -44,7 +44,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="50dp"
 
-        android:src="@drawable/ic_empresa" />
+        android:src="@drawable/ic_empresa"
+        android:onClick="empresa"/>
 
     <TextView
         android:id="@+id/textEmpresa"
@@ -58,7 +59,8 @@
 
         android:text="O que nossa empresa fez?"
         android:textColor="#DCDCDC"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:onClick="empresa"/>
 
     <ImageView
         android:id="@+id/ImageViewIcFilmes"
