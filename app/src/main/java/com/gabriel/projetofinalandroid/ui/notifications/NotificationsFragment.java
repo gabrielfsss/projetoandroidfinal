@@ -47,6 +47,7 @@ public class NotificationsFragment extends Fragment {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         Usuario a = documentSnapshot.toObject(Usuario.class);
                         fetchMessages();
+
                     }
                 });
 
