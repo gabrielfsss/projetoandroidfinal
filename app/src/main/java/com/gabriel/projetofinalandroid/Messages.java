@@ -2,8 +2,20 @@ package com.gabriel.projetofinalandroid;
 
 public class Messages {
 
-    private String text, fromId, toId;
+    private String text, fromId, toId, nameUser;
     private long timestamp;
+
+    public Messages(){
+
+    }
+
+    public String getNameUser() {
+        return nameUser;
+    }
+
+    public void setNameUser(String nameUser) {
+        this.nameUser = nameUser;
+    }
 
     public String getText() {
         return text;
