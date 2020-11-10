@@ -15,9 +15,7 @@
 
         android:layout_margin="50dp"
 
-        android:src="@drawable/ic_aviao"
-
-        android:onClick="aviao"/>
+        android:src="@drawable/ic_aviao"/>
 
     <TextView
         android:id="@+id/textConfigAviao"
@@ -30,9 +28,7 @@
 
         android:text="Como usar o aplicativo?"
         android:textColor="#DCDCDC"
-        android:textSize="16sp"
-        android:onClick="aviao"
-        />
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/imageViewIcEmpresa"
@@ -44,8 +40,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="50dp"
 
-        android:src="@drawable/ic_empresa"
-        android:onClick="empresa"/>
+        android:src="@drawable/ic_empresa" />
 
     <TextView
         android:id="@+id/textEmpresa"
@@ -59,8 +54,7 @@
 
         android:text="O que nossa empresa fez?"
         android:textColor="#DCDCDC"
-        android:textSize="16sp"
-        android:onClick="empresa"/>
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/ImageViewIcFilmes"
@@ -72,8 +66,7 @@
         android:layout_marginTop="77dp"
         android:layout_marginLeft="50dp"
 
-        android:src="@drawable/ic_filmes"
-        android:onClick="filmes"/>
+        android:src="@drawable/ic_filmes" />
 
     <TextView
         android:id="@+id/textFilmes"
@@ -87,8 +80,7 @@
 
         android:text="Quer assistir filmes?"
         android:textColor="#DCDCDC"
-        android:textSize="16sp"
-        android:onClick="filmes"/>
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/btnlogout"

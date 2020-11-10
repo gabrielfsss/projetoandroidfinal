@@ -2,6 +2,7 @@ package com.gabriel.projetofinalandroid.ui.dashboard;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +30,7 @@ import com.gabriel.projetofinalandroid.R;
 public class DashboardFragment extends Fragment {
 
     private Button btnlogout;
+    private ImageView imageViewIcAviao, imageViewIcEmpresa, ImageViewIcFilmes;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -50,21 +52,37 @@ public class DashboardFragment extends Fragment {
             }
         });
 
+        ImageView imageViewIcAviao = (ImageView) root.findViewById(R.id.imageViewIcAviao);
+        ImageView imageViewIcEmpresa = (ImageView) root.findViewById(R.id.imageViewIcEmpresa);
+        ImageView ImageViewIcFilmes = (ImageView) root.findViewById(R.id.ImageViewIcFilmes);
+
+        imageViewIcAviao.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getActivity(), telaaviao.class);
+                startActivity(i);
+            }
+        });
+
+        imageViewIcEmpresa.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getActivity(), telaempresa.class);
+                startActivity(i);
+            }
+        });
+
+        ImageViewIcFilmes.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getActivity(), telafilmes.class);
+                startActivity(i);
+            }
+        });
+
         return root;
-    }
-
-    public void aviao(View view){
-        Intent i = new Intent(getActivity(), telaaviao.class);
-        startActivity(i);
-    }
-
-    public void filmes(View view){
-        Intent i = new Intent(getActivity(), telafilmes.class);
-        startActivity(i);
-    }
-
-    public void empresa(View view){
-        Intent i = new Intent(getActivity(), telaempresa.class);
-        startActivity(i);
     }
 }
