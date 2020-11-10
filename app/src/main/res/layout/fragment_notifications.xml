@@ -4,73 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.NotificationsFragment"
-    android:background="#363636">
+    android:background="#363636"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="195dp"
+        android:layout_marginRight="195dp"
+        app:srcCompat="@drawable/ic_alert"
+        tools:ignore="VectorDrawableCompat" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSendChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_send" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSendChat"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="8dp" />
 
     <EditText
-        android:id="@+id/editTextTexto"
-
-
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-
-        android:inputType="text"
-        android:paddingStart="50dp"
-        android:paddingLeft="50dp"
-
-        android:hint="Digite algo!"
-        android:textColorHint="#808080"
-        android:textSize="16sp"
-
+        android:id="@+id/txtMessageChat"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rcView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="6dp"
+        android:layout_toStartOf="@+id/btnSendChat"
+        android:layout_toLeftOf="@+id/btnSendChat"
+        android:background="#000"
+        android:ems="10"
+        android:hint="DIgite..."
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColor="#FFF"
+        android:textColorHint="#F1E2E2" />
 
-        android:background="#1C1C1C"
-        android:textColor="#DCDCDC"
-
-        android:drawablePadding="40dp"
-        />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-
-        android:background="#1C1C1C">
-
-
-        <ImageView
-            android:id="@+id/imageView9"
-
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-
-            app:srcCompat="@drawable/ic_alert"
-            tools:ignore="VectorDrawableCompat"
-
-            android:layout_centerInParent="true"
-
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            />
-
-    </RelativeLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="690dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="650dp"
-
-                android:layout_marginTop="40dp">
-
-            </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
 </RelativeLayout>
