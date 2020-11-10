@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".telafilmes"></activity>
+        <activity android:name=".telaaviao" />
         <activity
             android:name=".telasApp"
-            android:label="@string/title_activity_telas_app"></activity>
+            android:label="@string/title_activity_telas_app" />
         <activity android:name=".telaCadastro" />
         <activity android:name=".MainActivity">
             <intent-filter>

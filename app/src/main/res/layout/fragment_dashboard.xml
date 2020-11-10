@@ -15,7 +15,9 @@
 
         android:layout_margin="50dp"
 
-        android:src="@drawable/ic_aviao" />
+        android:src="@drawable/ic_aviao"
+
+        android:onClick="aviao"/>
 
     <TextView
         android:id="@+id/textConfigAviao"
@@ -29,33 +31,8 @@
         android:text="Como usar o aplicativo?"
         android:textColor="#DCDCDC"
         android:textSize="16sp"
+        android:onClick="aviao"
         />
-
-    <ImageView
-        android:id="@+id/imageViewIcPerigo"
-
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-
-        android:layout_below="@+id/imageViewIcAviao"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="50dp"
-
-        android:src="@drawable/ic_perigo" />
-
-    <TextView
-        android:id="@+id/textConfigPerigo"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_below="@+id/textConfigAviao"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="87dp"
-
-        android:text="Houve emergência?"
-        android:textColor="#DCDCDC"
-        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/imageViewIcEmpresa"
@@ -63,8 +40,8 @@
         android:layout_width="50dp"
         android:layout_height="30dp"
 
-        android:layout_below="@+id/imageViewIcPerigo"
-        android:layout_marginTop="77dp"
+        android:layout_below="@+id/imageViewIcAviao"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="50dp"
 
         android:src="@drawable/ic_empresa" />
@@ -75,9 +52,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_below="@+id/textConfigPerigo"
+        android:layout_below="@+id/textConfigAviao"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="87dp"
+        android:layout_marginTop="90dp"
 
         android:text="O que nossa empresa fez?"
         android:textColor="#DCDCDC"
@@ -93,7 +70,8 @@
         android:layout_marginTop="77dp"
         android:layout_marginLeft="50dp"
 
-        android:src="@drawable/ic_filmes" />
+        android:src="@drawable/ic_filmes"
+        android:onClick="filmes"/>
 
     <TextView
         android:id="@+id/textFilmes"
@@ -105,9 +83,10 @@
         android:layout_marginLeft="120dp"
         android:layout_marginTop="87dp"
 
-        android:text="Quer assistir a filmes?"
+        android:text="Quer assistir filmes?"
         android:textColor="#DCDCDC"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:onClick="filmes"/>
 
     <Button
         android:id="@+id/btnlogout"

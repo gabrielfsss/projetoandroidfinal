@@ -18,6 +18,9 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.gabriel.projetofinalandroid.MainActivity;
 import com.gabriel.projetofinalandroid.R;
+import com.gabriel.projetofinalandroid.telaCadastro;
+import com.gabriel.projetofinalandroid.telaaviao;
+import com.gabriel.projetofinalandroid.telafilmes;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.gabriel.projetofinalandroid.R;
@@ -47,5 +50,15 @@ public class DashboardFragment extends Fragment {
         });
 
         return root;
+    }
+
+    public void aviao(View view){
+        Intent i = new Intent(getActivity(), telaaviao.class);
+        startActivity(i);
+    }
+
+    public void filmes(View view){
+        Intent i = new Intent(getActivity(), telafilmes.class);
+        startActivity(i);
     }
 }
