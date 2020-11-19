@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="24sp"
         android:textColor="#FFF"
-        android:text="Pra Relaxar:"/>
+        android:text="Terror:"/>
 
     <TextView
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
         android:id="@+id/textView2"
         android:textSize="24sp"
         android:textColor="#FFF"
-        android:text="Agitadas:"/>
+        android:text="Animações:"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView2"
         android:layout_marginTop="32dp" android:id="@+id/textView3"
         android:textSize="24sp" android:textColor="#FFF"
-        android:text="Funk:"/>
+        android:text="Divertidos:"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
         android:layout_marginTop="32dp" android:id="@+id/textView4"
         android:textSize="24sp"
         android:textColor="#FFF"
-        android:text="antigas e populares:"/>
+        android:text="Para chorar:"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_height="wrap_content"
