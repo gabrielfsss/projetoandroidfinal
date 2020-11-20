@@ -139,6 +139,7 @@ public class NotificationsFragment extends Fragment {
         }
 
         @Override
+
         public void bind(@NonNull ViewHolder viewHolder, int position) {
             TextView txtMsg = viewHolder.itemView.findViewById(R.id.txtMessageChatList);
             TextView txtName = viewHolder.itemView.findViewById(R.id.txtNameChat);
