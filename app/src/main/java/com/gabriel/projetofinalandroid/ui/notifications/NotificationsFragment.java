@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,7 +42,7 @@ public class NotificationsFragment extends Fragment {
     private FloatingActionButton btnSendMessage;
     private Usuario me;
     private GroupAdapter adapter;
-
+    private ImageView imgemerg;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
@@ -49,6 +50,7 @@ public class NotificationsFragment extends Fragment {
         txtMessageChat = root.findViewById(R.id.txtMessageChat);
         btnSendMessage = root.findViewById(R.id.btnSendChat);
         RecyclerView rcView = root.findViewById(R.id.rcView);
+        imgemerg = root.findViewById(R.id.imgemerg);
 
         adapter = new GroupAdapter();
         rcView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -149,9 +151,51 @@ public class NotificationsFragment extends Fragment {
 
         @Override
         public int getLayout() {
-            return message.getFromId().equals(FirebaseAuth.getInstance().getUid())
-                    ? R.layout.item_chat_me
-                    : R.layout.item_chat_to;
+            if(message.isAviso() == false) {
+                if (message.getFromId().equals(FirebaseAuth.getInstance().getUid()) == true) {
+                    return R.layout.item_chat_me;
+                } else{
+                    return R.layout.item_chat_to;
+                }
+            }
+            else{
+                return R.layout.activity_chat_emerg;
+            }
         }
     }
+
+    private void sendMessageEmerg() {
+        String text = "Preciso de ajuda";
+
+        txtMessageChat.setText(null);
+
+        final String fromId = FirebaseAuth.getInstance().getUid();
+        long timestamp = System.currentTimeMillis();
+
+        final Messages message = new Messages();
+        message.setFromId(fromId);
+        message.setToId("aviao");
+        message.setTimestamp(timestamp);
+        message.setText(text);
+        message.setNameUser(me.getNome());
+
+        if (!message.getText().isEmpty()) {
+            FirebaseFirestore.getInstance().collection("/conversas")
+                    .add(message)
+                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            Log.d("Teste", documentReference.getId());
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.e("Teste", e.getMessage(), e);
+                        }
+                    });
+
+        }
+    }
+
 }
