@@ -31,6 +31,7 @@ public class DashboardFragment extends Fragment {
 
     private Button btnlogout;
     private ImageView imageViewIcAviao, imageViewIcEmpresa, ImageViewIcFilmes;
+    private TextView textConfigAviao, textEmpresa, textFilmes;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -56,6 +57,10 @@ public class DashboardFragment extends Fragment {
         ImageView imageViewIcEmpresa = (ImageView) root.findViewById(R.id.imageViewIcEmpresa);
         ImageView ImageViewIcFilmes = (ImageView) root.findViewById(R.id.ImageViewIcFilmes);
 
+        TextView textConfigAviao = (TextView) root.findViewById(R.id.textConfigAviao);
+        TextView textEmpresa = (TextView) root.findViewById(R.id.textEmpresa);
+        TextView textFilmes = (TextView) root.findViewById(R.id.textFilmes);
+
         imageViewIcAviao.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -75,6 +80,33 @@ public class DashboardFragment extends Fragment {
         });
 
         ImageViewIcFilmes.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getActivity(), telafilmes.class);
+                startActivity(i);
+            }
+        });
+
+        textConfigAviao.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getActivity(), telafilmes.class);
+                startActivity(i);
+            }
+        });
+
+        textEmpresa.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getActivity(), telafilmes.class);
+                startActivity(i);
+            }
+        });
+
+        textFilmes.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 

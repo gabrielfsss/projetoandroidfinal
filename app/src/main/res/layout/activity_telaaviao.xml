@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="55dp"
 
-        android:text="Olá! Gostaríamos de apresentar esse aplicativo!"
+        android:text="Esse é o nosso aplicativo!"
         android:textColor="#FFFF"
         android:textSize="18sp"
         />

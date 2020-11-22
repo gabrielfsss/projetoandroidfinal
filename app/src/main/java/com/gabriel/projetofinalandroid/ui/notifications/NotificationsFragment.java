@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,6 +42,7 @@ public class NotificationsFragment extends Fragment {
     private FloatingActionButton btnSendMessage;
     private Usuario me;
     private GroupAdapter adapter;
+    private ImageView imgemerg;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -48,6 +50,7 @@ public class NotificationsFragment extends Fragment {
 
         txtMessageChat = root.findViewById(R.id.txtMessageChat);
         btnSendMessage = root.findViewById(R.id.btnSendChat);
+        imgemerg = root.findViewById(R.id.imgemerg);
         RecyclerView rcView = root.findViewById(R.id.rcView);
 
         adapter = new GroupAdapter();
@@ -58,6 +61,13 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 sendMessage();
+            }
+        });
+
+        imgemerg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMessageEmerg();
             }
         });
 
@@ -110,6 +120,7 @@ public class NotificationsFragment extends Fragment {
         message.setTimestamp(timestamp);
         message.setText(text);
         message.setNameUser(me.getNome());
+        message.setAviso(false);
 
         if (!message.getText().isEmpty()) {
             FirebaseFirestore.getInstance().collection("/conversas")
@@ -150,9 +161,53 @@ public class NotificationsFragment extends Fragment {
 
         @Override
         public int getLayout() {
-            return message.getFromId().equals(FirebaseAuth.getInstance().getUid())
-                    ? R.layout.item_chat_me
-                    : R.layout.item_chat_to;
+
+            if(message.isAviso() == false) {
+                if (message.getFromId().equals(FirebaseAuth.getInstance().getUid()) == true) {
+                    return R.layout.item_chat_me;
+                } else{
+                    return R.layout.item_chat_to;
+                }
+            }
+                else{
+                    return R.layout.activity_chat_emerg;
+                }
+        }
+    }
+
+    private void sendMessageEmerg(){
+
+        String textemerg = "Preciso de ajuda!";
+
+        txtMessageChat.setText(null);
+
+        final String fromId = FirebaseAuth.getInstance().getUid();
+        long timestamp = System.currentTimeMillis();
+
+        final Messages message = new Messages();
+        message.setFromId(fromId);
+        message.setToId("aviao");
+        message.setTimestamp(timestamp);
+        message.setText(textemerg);
+        message.setNameUser(me.getNome());
+        message.setAviso(true);
+
+        if (!message.getText().isEmpty()) {
+            FirebaseFirestore.getInstance().collection("/conversas")
+                    .add(message)
+                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            Log.d("Teste", documentReference.getId());
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.e("Teste", e.getMessage(), e);
+                        }
+                    });
+
         }
     }
 }
