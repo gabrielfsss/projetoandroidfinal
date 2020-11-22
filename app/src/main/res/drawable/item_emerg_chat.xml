@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
+<<<<<<< HEAD
     <solid android:color="#00BFFF" />
+=======
+    <solid android:color="#DCDCDC"/>
+>>>>>>> origin/master
     <corners android:radius="50dp"/>
 </shape>

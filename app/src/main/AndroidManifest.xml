@@ -9,11 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".chat_me"></activity>
         <activity android:name=".telaempresa" />
         <activity android:name=".telafilmes" />
         <activity android:name=".telaaviao" />
-        <activity android:screenOrientation="landscape" android:name=".PlayMoviesActivity"/>
         <activity
             android:name=".telasApp"
             android:label="@string/title_activity_telas_app" />
