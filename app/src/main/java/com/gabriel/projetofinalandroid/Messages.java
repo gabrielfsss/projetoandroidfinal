@@ -4,6 +4,9 @@ public class Messages {
 
     private String text, fromId, toId, nameUser;
     private long timestamp;
+    boolean aviso;
+
+
 
     public Messages(){
 
@@ -48,4 +51,13 @@ public class Messages {
     public void setToId(String toId) {
         this.toId = toId;
     }
+
+    public boolean isAviso() {
+        return aviso;
+    }
+
+    public void setAviso(boolean aviso) {
+        this.aviso = aviso;
+    }
 }
+
