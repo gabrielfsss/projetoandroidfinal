@@ -28,31 +28,31 @@
         android:layout_marginStart="8dp"
         android:id="@+id/rcPraRelaxar"/>
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:id="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="24sp"
-        android:textColor="#FFF"
-        android:text="Terror:"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Pra você morrer de rir"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rcPraRelaxar"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="32dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:id="@+id/textView2"
-        android:textSize="24sp"
-        android:textColor="#FFF"
-        android:text="Animações:"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="32dp"
+            android:text="Quer um pouco de susto?"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcPraRelaxar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_height="wrap_content"
@@ -65,14 +65,16 @@
         android:layout_marginStart="8dp"
         android:id="@+id/rcAgitar"/>
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rcAgitar"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        android:layout_marginTop="32dp" android:id="@+id/textView3"
-        android:textSize="24sp" android:textColor="#FFF"
-        android:text="Divertidos:"/>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Um pouco de ação é sempre bom"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/rcAgitar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_height="wrap_content"
@@ -83,15 +85,16 @@
         android:layout_marginTop="16dp"
         android:id="@+id/rcFunk"></androidx.recyclerview.widget.RecyclerView>
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rcFunk"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        android:layout_marginTop="32dp" android:id="@+id/textView4"
-        android:textSize="24sp"
-        android:textColor="#FFF"
-        android:text="Para chorar:"/>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Chore um pouco se quiser"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/rcFunk" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_height="wrap_content"
