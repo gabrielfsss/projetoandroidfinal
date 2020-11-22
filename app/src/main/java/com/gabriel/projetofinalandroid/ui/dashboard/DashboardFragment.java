@@ -92,7 +92,7 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(getActivity(), telafilmes.class);
+                Intent i = new Intent(getActivity(), telaaviao.class);
                 startActivity(i);
             }
         });
@@ -101,7 +101,7 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(getActivity(), telafilmes.class);
+                Intent i = new Intent(getActivity(), telaempresa.class);
                 startActivity(i);
             }
         });

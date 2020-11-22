@@ -21,11 +21,7 @@
         android:text="TextView"
         android:textAlignment="center"
         android:gravity="center_horizontal"
-<<<<<<< HEAD
         android:textColor="#FF1493"
-=======
-        android:textColor="#FF0000"
->>>>>>> origin/master
         android:textSize="16sp"
 
         app:layout_constraintEnd_toEndOf="parent"
