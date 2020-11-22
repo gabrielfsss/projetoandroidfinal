@@ -12,6 +12,7 @@
         <activity android:name=".telaempresa" />
         <activity android:name=".telafilmes" />
         <activity android:name=".telaaviao" />
+        <activity android:name=".PlayMoviesActivity" android:screenOrientation="landscape"></activity>
         <activity
             android:name=".telasApp"
             android:label="@string/title_activity_telas_app" />
